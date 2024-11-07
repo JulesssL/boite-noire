@@ -1,0 +1,707 @@
+@font-face {
+    font-family: "Agbalumo";
+    src: url("ressources/font/Agbalumo-Regular.ttf");
+    src: url("ressources/font/Agbalumo-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("ressources/font/Poppins-Medium.ttf");
+    src: url("ressources/font/Poppins-Medium.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: "PoppinsLight";
+    src: url("ressources/font/Poppins-Light.ttf");
+    src: url("ressources/font/Poppins-Light.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url("ressources/font/Poppins-SemiBold.ttf");
+    src: url("ressources/font/Poppins-SemiBold.ttf") format("ttf"),
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: #000000;
+    padding: 0;
+    background-color: #1e1e1e;
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(200px);
+    z-index: 1;
+    transition-delay: 0.1s;
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1;
+}
+
+
+.accueilContenuImage {
+    margin-top: 100px;
+}
+
+.accueilContenuImage img {
+    filter: drop-shadow(1px 1px 2px #ffffff);
+}
+
+.accueilContenuTexte {
+    color: #ffffff;
+    font-family: 'PoppinsLight';
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.accueilContenuBoutons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 325px;
+    margin-top: 20px;
+}
+
+.bouton {
+    color: #ffffff;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'PoppinsBold';
+    border: 3px solid #ffffff;
+    padding: 0.5em 0.4em;
+    width: 150px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.bouton:hover {
+    transition: 0.2s ease-in-out;
+    box-shadow: 2px 2px 0px #000000, 4px 4px 0px #ffffff;
+    background-color: #ffffff;
+    color:black;
+}
+
+.footerAccueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 80%;
+    align-items: center;
+    background-color: #1e1e1e;
+    width: 100%;
+    padding:20px
+}
+
+.boutonMentionsLegales {
+    text-decoration: none;
+    color: #212121;
+    font-size: 10px;
+    font-family: 'PoppinsLight';
+}
+
+/* Sidenav menu */
+.sideNav {
+    height: 100%;
+    width: 275px;
+    position: fixed;
+    top: 0;
+    left: -275px;
+    background-color: #1e1e1e;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.burgerA {
+    padding-left: 10%;
+    font-size: 25px;
+    color: #ffffff;
+    display: inline-block;
+    transition: 0.3s;
+    font-family: 'PoppinsLight';
+    margin-top: 40px;
+    transition: 0.3s ease;
+}
+
+.burgerA:hover{
+    color: #DCB253;
+    transition:left .3s ease;
+}
+
+.sideNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#closeBtn{
+    color:#ffffff;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0px;
+}
+
+/* Active class */
+.sideNav.active {
+    left: 0;
+}
+
+
+
+/* Icône burger */
+.burgerIcon{
+    display: block;
+    position: fixed;
+    left: 30px;
+    top:30px;
+    z-index: 2;
+}
+
+
+.droits{
+    color:#ffffff;
+    font-size: 14px;
+}
+
+.bigTitle{
+    font-family: 'Agbalumo';
+    font-size: 40px;
+    color:#ffffff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.midTitle{
+    font-family: 'Agbalumo';
+    font-size: 30px;
+    color:#DCB253;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title{
+    color:#ffffff;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.separateurVertical{
+    height:50vh;
+    width:4px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color:#ffffff
+}
+
+
+
+
+.reserverFormBox{
+    display: block;
+    width: 80%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.72);
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+
+.reserverForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.formSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.submit{
+    width:150px;
+    transition:0.2s ease;
+
+}
+
+.submit:hover{
+    background-color: #ffffff;
+    color:#000000;
+    transition:0.2s ease;
+
+}
+
+
+
+input{
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: #00000000;
+    color:#ffffff;
+    font-family: 'PoppinsLight';
+    padding: 0.5rem 0.7rem;
+    margin: 5px;
+    width:275px;
+}
+
+textarea{
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: #00000000;
+    color:#ffffff;
+    font-family: 'PoppinsLight';
+    padding: 0.5rem 0.7rem;
+    width:300px;
+}
+
+
+
+/*Contact*/
+
+.banniereContact img{
+    object-fit: cover;
+    margin: 50px 0px;
+    border-radius: 50px 0px 0px 50px;
+    position: absolute;
+    top:0px;
+    right: 0;
+}
+
+.contact{
+    background-color: #1e1e1e;
+}
+
+.contactLieu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:100px;
+    background-color: #1e1e1e;
+    padding: 50px;
+}
+
+.contactLieuInfos{
+    border-radius: 20px;
+    border: 2px dotted white;
+    padding: 40px;
+}
+
+.text{
+    color:#DCB253;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contactRetrouver{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:100px;
+    background-color: #1e1e1e;
+    padding: 50px;
+}
+
+.contactRetrouverInfos{
+    border-radius: 20px;
+    border: 2px dotted white;
+    padding: 40px;
+}
+
+.contactRetrouverContentDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20%;
+    margin:30px auto;
+}
+
+
+
+
+.iconContactRetrouver{
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    padding:10px;
+}
+
+
+.DivLogoImg{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.LogoImg{
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    width: 80%;
+}
+
+@media screen and (max-width: 767px){
+    a {
+        text-decoration: none;
+    }
+    
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        color: #000000;
+        padding: 0;
+    }
+    
+    
+    .reveal {
+        opacity: 0;
+        transform: translateY(200px);
+        z-index: 1;
+        transition-delay: 0.1s;
+    }
+    
+    .revealVisible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 1;
+    }
+    
+    
+    .accueilContenuImage {
+        margin-top: 100px;
+    }
+    
+    .accueilContenuImage img {
+        filter: drop-shadow(1px 1px 2px #ffffff);
+    }
+    
+    .accueilContenuTexte {
+        color: #ffffff;
+        font-family: 'PoppinsLight';
+        font-size: 24px;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    
+    .accueilContenuBoutons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 325px;
+        margin-top: 20px;
+    }
+    
+    .bouton {
+        color: #ffffff;
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'PoppinsBold';
+        border: 3px solid #ffffff;
+        padding: 0.5em 0.4em;
+        width: 150px;
+        text-align: center;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .bouton:hover {
+        transition: 0.2s ease-in-out;
+        box-shadow: 2px 2px 0px #000000, 4px 4px 0px #ffffff;
+        background-color: #ffffff;
+        color:black;
+    }
+    
+    .footerAccueil {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30%;
+        align-items: center;
+    }
+    
+    .boutonMentionsLegales {
+        text-decoration: none;
+        color: #212121;
+        font-size: 10px;
+        font-family: 'PoppinsLight';
+    }
+    
+    /* Sidenav menu */
+    .sideNav {
+        height: 100%;
+        width: 40%;
+        position: fixed;
+        top: 0;
+        left: -40%;
+        background-color: #1e1e1e;
+        padding-top: 40px;
+        transition: left 0.5s ease;
+        z-index: 5;
+    }
+    
+    /* Sidenav menu links */
+    .burgerA {
+        padding-left: 10%;
+        font-size: 25px;
+        color: #ffffff;
+        display: inline-block;
+        transition: 0.3s;
+        font-family: 'PoppinsLight';
+        margin-top: 40px;
+        transition: 0.3s ease;
+    }
+    
+    .burgerA:hover{
+        color: #DCB253;
+        transition:left .3s ease;
+    }
+    
+    .sideNav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #closeBtn{
+        color:#ffffff;
+        font-size: 60px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        padding: 0px;
+    }
+    
+    /* Active class */
+    .sideNav.active {
+        left: 0;
+    }
+    
+    
+    
+    /* Icône burger */
+    .burgerIcon{
+        display: block;
+        position: fixed;
+        left: 30px;
+        top:30px;
+        z-index: 2;
+    }
+    
+    
+    .droits{
+        color:#ffffff;
+        font-size: 14px;
+    }
+    
+    .bigTitle{
+        font-family: 'Agbalumo';
+        font-size: 30px;
+        color:#ffffff;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .midTitle{
+        font-family: 'Agbalumo';
+        font-size: 24px;
+        color:#DCB253;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    .title{
+        color:#ffffff;
+        font-size: 22px;
+        text-align: center;
+        padding-top: 12px;
+    }
+
+
+    .formSide{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    iframe{
+        width:80%;
+        height: auto;
+        display: block;
+        width: auto;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .submit{
+        width:150px;
+        transition:0.2s ease;
+    
+    }
+    
+    .submit:hover{
+        background-color: #ffffff;
+        color:#000000;
+        transition:0.2s ease;
+    
+    }
+    
+    
+    
+    input{
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+        background-color: #00000000;
+        color:#ffffff;
+        font-family: 'PoppinsLight';
+        padding: 0.5rem 0.7rem;
+        margin: 5px;
+        width:80%;
+    }
+    
+    textarea{
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+        background-color: #00000000;
+        color:#ffffff;
+        font-family: 'PoppinsLight';
+        padding: 0.5rem 0.7rem;
+        width:80%;
+    }
+    
+    
+    
+    /*Contact*/
+    
+    
+    .contact{
+        background-color: #1e1e1e;
+    }
+    
+    .contactLieu{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin-top:40px;
+        background-color: #1e1e1e;
+        padding: 10px;
+    }
+    
+    .contactLieuInfos{
+        border-radius: 20px;
+        border: 2px dotted white;
+        padding: 10px;
+    }
+
+    .contactLieuInfosHoraires{
+        width:90%;
+    }
+    
+    .text{
+        color:#DCB253;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .contactRetrouver{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:40px;
+        background-color: #1e1e1e;
+        padding: 10px;
+    }
+
+    .contactRetrouverForm{
+        margin-top: 80px;
+        width: 100%;
+    }
+    
+    .contactRetrouverInfos{
+        border-radius: 20px;
+        border: 2px dotted white;
+        padding: 10px;
+    }
+    
+    .contactRetrouverContentDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20%;
+        margin:30px auto;
+    }
+    
+    
+    .iconContactRetrouver{
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        padding:10px;
+    }
+    
+    
+    .DivLogoImg{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    .LogoImg{
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+        width: 50%;
+    }
+}
